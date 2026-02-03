@@ -1,5 +1,5 @@
 spring:
   config:
-    name: learnBigMarket-app
+    name: big-market-app
   profiles:
     active: dev
