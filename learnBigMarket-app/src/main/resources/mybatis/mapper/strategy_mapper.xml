@@ -15,5 +15,10 @@
         from strategy
         limit 10
     </select>
+    <select id="queryStrategyEntityByStrategyId" parameterType="java.lang.Long" resultMap="dataMap">
+        select * from
+            strategy
+        where strategy_id = #{strategyId}
+    </select>
 
 </mapper>

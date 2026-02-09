@@ -16,7 +16,7 @@ import java.math.BigDecimal;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class StrategyArmoryEntity {
+public class StrategyAwardEntity  {
 
     /** 抽奖策略ID */
     private Long strategyId;
