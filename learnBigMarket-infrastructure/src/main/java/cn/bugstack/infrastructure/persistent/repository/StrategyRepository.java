@@ -154,4 +154,19 @@ public class StrategyRepository implements IStrategyRepository {
                 .ruleValue(strategyRule.getRuleValue())
                 .build();
     }
+
+    @Override
+    public int getRateRange(Long strategyId) {
+        return getRateRange(String.valueOf(strategyId));
+    }
+
+    @Override
+    public int getRateRange(String key) {
+        return redisService.getValue(Constants.RedisKey.STRATEGY_RATE_RANGE_KEY + key);
+    }
+
+    @Override
+    public Integer getStrategyAwardAssemble(String key, Integer rateKey) {
+        return redisService.getFromMap(Constants.RedisKey.STRATEGY_RATE_TABLE_KEY + key, rateKey);
+    }
 }
