@@ -43,9 +43,16 @@ public class RuleActionEntity <T extends RuleActionEntity.RaffleEntity>{
     }
 
     //抽奖中的结果要继承这个类
+    @EqualsAndHashCode(callSuper = true)
+    @Data
+    @Builder
+    @AllArgsConstructor
+    @NoArgsConstructor
     static public class RaffleCenterEntity extends RaffleEntity{
-
-
+        private Long strategyId;
+        private Integer awardId;
+        private String ruleLockValueKey;
+        private String ruleDesc;
     }
 
     //抽奖后的结果要继承这个类
