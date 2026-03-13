@@ -29,5 +29,14 @@
         where strategy_id = #{strategyId}
         order by sort asc
     </select>
+    <select
+            id="queryStrategyAwardRuleModels" parameterType="cn.bugstack.infrastructure.persistent.po.StrategyAward" resultType="java.lang.String"
+    >
+        select rule_models
+        from strategy_award
+        where strategy_id = #{strategyId} and award_id = #{awardId};
+
+
+    </select>
 
 </mapper>

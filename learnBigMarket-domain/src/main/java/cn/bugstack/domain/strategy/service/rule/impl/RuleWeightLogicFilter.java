@@ -53,7 +53,6 @@ public class RuleWeightLogicFilter implements ILogicFilter<RuleActionEntity.Raff
                     .code(RuleLogicCheckTypeVO.TAKE_OVER.getCode())
                     .info(RuleLogicCheckTypeVO.TAKE_OVER.getInfo())
                     .data(RuleActionEntity.RaffleBeforeEntity.builder()
-                            .awardId(ruleMatterEntity.getAwardId())
                             .strategyId(ruleMatterEntity.getStrategyId())
                             .ruleWeightValueKey(ruleWeightValue)
                             .build())
